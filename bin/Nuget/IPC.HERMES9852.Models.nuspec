@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>IPC.HERMES9852.Models</id>
+    <version>1.0.0</version>
+    <title>IPC-HERMES-9852 XML Messaging Models</title>
+    <authors>4IR.UK</authors>
+    <owners>4IR.UK</owners>
+    <projectUrl>https://github.com/industry4/IPC.HERMES9852.Models</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>XML Messaging Models for IPC-HERMES-9852 'The Hermes Standard'</description>
+    <license type="expression">MIT</license>
+    <releaseNotes>https://www.the-hermes-standard.info/</releaseNotes>
+    <copyright>IPC</copyright>
+    <tags>IPC IPCHERMES9852 The_Hermes_Standard Hermes SMT Industry40</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.2">
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\..\src\IPC.HERMES9852.Models\bin\Release\IPC.HERMES9852.Models.dll" target="lib\net472" />
+  </files>
+</package>
