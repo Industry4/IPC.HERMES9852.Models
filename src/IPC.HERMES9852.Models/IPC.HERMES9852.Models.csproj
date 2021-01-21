@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B6A1F2D-18FE-430E-BD88-84F225B967AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IPC.HERMES9852.Models</RootNamespace>
+    <AssemblyName>IPC.HERMES9852.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Board.cs" />
+    <Compile Include="Models\SendWorkOrderInfo.cs" />
+    <Compile Include="Roots\BoardAvailableData.cs" />
+    <Compile Include="Models\BoardForecast.cs" />
+    <Compile Include="Roots\BoardForecastData.cs" />
+    <Compile Include="Models\CheckAlive.cs" />
+    <Compile Include="Roots\CheckAliveData.cs" />
+    <Compile Include="Models\CurrentConfiguration.cs" />
+    <Compile Include="Models\DownstreamConfiguration.cs" />
+    <Compile Include="Models\GetConfiguration.cs" />
+    <Compile Include="Roots\HermesData.cs" />
+    <Compile Include="Roots\HermesRoot.cs" />
+    <Compile Include="Interfaces\IBoardAvailableData.cs" />
+    <Compile Include="Interfaces\ICheckAliveData.cs" />
+    <Compile Include="Interfaces\IMachineReadyData.cs" />
+    <Compile Include="Interfaces\INotificationData.cs" />
+    <Compile Include="Interfaces\IQueryBoardInfoData.cs" />
+    <Compile Include="Interfaces\IRevokeBoardAvailableData.cs" />
+    <Compile Include="Interfaces\IRevokeMachineReadyData.cs" />
+    <Compile Include="Interfaces\ISendBoardInfoData.cs" />
+    <Compile Include="Interfaces\IServiceDescriptionData.cs" />
+    <Compile Include="Interfaces\IStartTransportData.cs" />
+    <Compile Include="Interfaces\IStopTransportData.cs" />
+    <Compile Include="Interfaces\ITransportFinishedData.cs" />
+    <Compile Include="Models\MachineReady.cs" />
+    <Compile Include="Roots\MachineReadyData.cs" />
+    <Compile Include="Models\Notification.cs" />
+    <Compile Include="Roots\NotificationData.cs" />
+    <Compile Include="Models\QueryBoardInfo.cs" />
+    <Compile Include="Roots\QueryBoardInfoData.cs" />
+    <Compile Include="Models\RevokeBoardAvailable.cs" />
+    <Compile Include="Roots\RevokeBoardAvailableData.cs" />
+    <Compile Include="Models\RevokeMachineReady.cs" />
+    <Compile Include="Roots\RevokeMachineReadyData.cs" />
+    <Compile Include="Roots\SendBoardInfoData.cs" />
+    <Compile Include="Models\ServiceDescription.cs" />
+    <Compile Include="Roots\ServiceDescriptionData.cs" />
+    <Compile Include="Models\SetConfiguration.cs" />
+    <Compile Include="Models\StartTransport.cs" />
+    <Compile Include="Roots\StartTransportData.cs" />
+    <Compile Include="Models\StopTransport.cs" />
+    <Compile Include="Roots\StopTransportData.cs" />
+    <Compile Include="Models\SupportedFeatures.cs" />
+    <Compile Include="Models\TransportFinished.cs" />
+    <Compile Include="Roots\TransportFinishedData.cs" />
+    <Compile Include="Models\UpstreamConfiguration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
