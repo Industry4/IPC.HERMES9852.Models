@@ -1,20 +1,19 @@
-﻿
-namespace IPC.HERMES9852.Models
+﻿namespace IPC.HERMES9852.Models
 {
-    [System.Xml.Serialization.XmlRoot(ElementName = "MachineReady")]
-    public class MachineReady
+    [System.Xml.Serialization.XmlRoot(ElementName = "SendBoardInfo")]
+    public class SendBoardInfo
     {
-        [System.Runtime.Serialization.DataMember]
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "FailedBoard")]
-        public int FailedBoard { get; set; }
-
-        [System.Runtime.Serialization.DataMember]
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ForecastId")]
-        public string ForecastId { get; set; }
-
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "BoardId")]
         public string BoardId { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "BoardIdCreatedBy")]
+        public string BoardIdCreatedBy { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "FailedBoard")]
+        public int FailedBoard { get; set; }
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "ProductTypeId")]
@@ -23,6 +22,14 @@ namespace IPC.HERMES9852.Models
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "FlippedBoard")]
         public int FlippedBoard { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TopBarcode")]
+        public string TopBarcode { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "BottomBarcode")]
+        public string BottomBarcode { get; set; }
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "Length")]
@@ -37,20 +44,12 @@ namespace IPC.HERMES9852.Models
         public float Thickness { get; set; }
 
         [System.Runtime.Serialization.DataMember]
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ConveyorSpeed")]
-        public float ConveyorSpeed { get; set; }
-
-        [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "TopClearanceHeight")]
         public float TopClearanceHeight { get; set; }
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "BottomClearanceHeight")]
         public float BottomClearanceHeight { get; set; }
-
-        [System.Runtime.Serialization.DataMember]
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "Weight")]
-        public float Weight { get; set; }
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "WorkOrderId")]

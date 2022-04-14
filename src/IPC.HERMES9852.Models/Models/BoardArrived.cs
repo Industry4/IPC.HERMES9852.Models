@@ -1,20 +1,32 @@
 ﻿
 namespace IPC.HERMES9852.Models
 {
-    [System.Xml.Serialization.XmlRoot(ElementName = "SendWorkOrderInfo")]
-    public class SendWorkOrderInfo
+    [System.Xml.Serialization.XmlRoot(ElementName = "BoardArrived")]
+    public class BoardArrived
     {
         [System.Runtime.Serialization.DataMember]
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "QueryId")]
-        public string QueryId { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "MachineId")]
+        public string MachineId { get; set; }
 
         [System.Runtime.Serialization.DataMember]
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "WorkOrderId")]
-        public string WorkOrderId { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "UpstreamLaneId")]
+        public int UpstreamLaneId { get; set; }
 
         [System.Runtime.Serialization.DataMember]
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "BatchId")]
-        public string BatchId { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "UpstreamInterfaceId")]
+        public string UpstreamInterfaceId { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "MagazineId")]
+        public string MagazineId { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "SlotId")]
+        public int SlotId { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "BoardTransfer")]
+        public int BoardTransfer { get; set; }
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "BoardId")]
@@ -71,5 +83,26 @@ namespace IPC.HERMES9852.Models
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "Weight")]
         public float Weight { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "WorkOrderId")]
+        public string WorkOrderId { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "BatchId")]
+        public string BatchId { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Route")]
+        public int Route { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Action")]
+        public int Action { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlArray("SubBoards")]
+        [System.Xml.Serialization.XmlArrayItem("SubBoard")]
+        public SubBoard[] SubBoards { get; set; }
     }
 }

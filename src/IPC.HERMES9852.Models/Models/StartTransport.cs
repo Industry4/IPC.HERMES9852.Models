@@ -1,13 +1,15 @@
-﻿using System.Xml.Serialization;
-
+﻿
 namespace IPC.HERMES9852.Models
 {
-    [XmlRoot(ElementName = "StartTransport")]
+    [System.Xml.Serialization.XmlRoot(ElementName = "StartTransport")]
     public class StartTransport
     {
-        [XmlAttribute(AttributeName = "BoardId")]
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "BoardId")]
         public string BoardId { get; set; }
-        [XmlAttribute(AttributeName = "ConveyorSpeed")]
-        public string ConveyorSpeed { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ConveyorSpeed")]
+        public float ConveyorSpeed { get; set; }
     }
 }

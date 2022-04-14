@@ -1,13 +1,14 @@
-﻿using System.Xml.Serialization;
-
-namespace IPC.HERMES9852.Models
+﻿namespace IPC.HERMES9852.Models
 {
-    [XmlRoot(ElementName = "CheckAlive")]
+    [System.Xml.Serialization.XmlRoot(ElementName = "CheckAlive")]
     public class CheckAlive
     {
-        [XmlAttribute(AttributeName = "Type")]
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Type")]
         public int Type { get; set; }
-        [XmlAttribute(AttributeName = "Id")]
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Id")]
         public string Id { get; set; }
     }
 }

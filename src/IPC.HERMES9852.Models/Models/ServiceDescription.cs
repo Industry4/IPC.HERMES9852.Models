@@ -1,28 +1,27 @@
-﻿using System.Runtime.Serialization;
-using System.Xml.Serialization;
-
+﻿
 namespace IPC.HERMES9852.Models
 {
-    [XmlRoot(ElementName = "ServiceDescription")]
+    [System.Xml.Serialization.XmlRoot(ElementName = "ServiceDescription")]
     public class ServiceDescription
     {
-        [DataMember]
-        [XmlElement(ElementName = "SupportedFeatures")]
-        public SupportedFeatures SupportedFeatures { get; set; }
-        [DataMember]
-        [XmlAttribute(AttributeName = "LaneId")]
-        public string LaneId { get; set; }
-        [DataMember]
-        [XmlAttribute(AttributeName = "MachineId")]
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "MachineId")]
         public string MachineId { get; set; }
-        [DataMember]
-        [XmlAttribute(AttributeName = "InterfaceId")]
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "LaneId")]
+        public int LaneId { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "InterfaceId")]
         public string InterfaceId { get; set; }
-        [DataMember]
-        [XmlAttribute(AttributeName = "Version")]
-        public string Version { get; set; } = "1.1";
-        [DataMember]
-        [XmlIgnore]
-        public bool ModeSMEMAAdaptor { get; set; } = false;
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Version")]
+        public string Version { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlElement(ElementName = "SupportedFeatures")]
+        public SupportedFeatures SupportedFeatures { get; set; }
     }
 }

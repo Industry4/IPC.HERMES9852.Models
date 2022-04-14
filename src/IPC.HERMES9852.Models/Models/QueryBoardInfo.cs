@@ -1,13 +1,15 @@
-﻿using System.Xml.Serialization;
-
+﻿
 namespace IPC.HERMES9852.Models
 {
-    [XmlRoot(ElementName = "QueryBoardInfo")]
+    [System.Xml.Serialization.XmlRoot(ElementName = "QueryBoardInfo")]
     public class QueryBoardInfo
     {
-        [XmlAttribute(AttributeName = "TopBarcode")]
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TopBarcode")]
         public string TopBarcode { get; set; }
-        [XmlAttribute(AttributeName = "BottomBarcode")]
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "BottomBarcode")]
         public string BottomBarcode { get; set; }
     }
 }

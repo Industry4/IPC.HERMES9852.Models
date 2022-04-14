@@ -1,13 +1,15 @@
-﻿using System.Xml.Serialization;
-
+﻿
 namespace IPC.HERMES9852.Models
 {
-    [XmlRoot(ElementName = "TransportFinished")]
+    [System.Xml.Serialization.XmlRoot(ElementName = "TransportFinished")]
     public class TransportFinished
     {
-        [XmlAttribute(AttributeName = "TransferState")]
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TransferState")]
         public int TransferState { get; set; }
-        [XmlAttribute(AttributeName = "BoardId")]
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "BoardId")]
         public string BoardId { get; set; }
     }
 }

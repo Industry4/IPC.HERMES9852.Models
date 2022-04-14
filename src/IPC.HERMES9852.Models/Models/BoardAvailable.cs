@@ -1,20 +1,39 @@
-﻿
-namespace IPC.HERMES9852.Models
+﻿namespace IPC.HERMES9852.Models
 {
-    [System.Xml.Serialization.XmlRoot(ElementName = "SendWorkOrderInfo")]
-    public class SendWorkOrderInfo
+    [System.Xml.Serialization.XmlRoot(ElementName = "BoardAvailable")]
+    public class BoardAvailable
     {
-        [System.Runtime.Serialization.DataMember]
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "QueryId")]
-        public string QueryId { get; set; }
+        /// <summary>
+        /// Represents the empty Board.
+        /// </summary>
+        public static BoardAvailable Empty
+        {
+            get
+            {
+                return new BoardAvailable
+                {
+                    BoardId = string.Empty,
+                    BoardIdCreatedBy = string.Empty,
+                    FailedBoard = 0,
+                    ProductTypeId = string.Empty,
+                    FlippedBoard = 0,
+                    TopBarcode = string.Empty,
+                    BottomBarcode = string.Empty,
+                    Length = 0,
+                    Width = 0,
+                    Thickness = 0,
+                    ConveyorSpeed = 0,
+                    TopClearanceHeight = 0,
+                    BottomClearanceHeight = 0
+                };
+            }
+        }
 
-        [System.Runtime.Serialization.DataMember]
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "WorkOrderId")]
-        public string WorkOrderId { get; set; }
-
-        [System.Runtime.Serialization.DataMember]
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "BatchId")]
-        public string BatchId { get; set; }
+        /// <summary>
+        /// Not Hermes Standard - Can be used for internal system use
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnore]
+        public string Guid { get; set; }
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "BoardId")]
@@ -71,5 +90,23 @@ namespace IPC.HERMES9852.Models
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "Weight")]
         public float Weight { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "WorkOrderId")]
+        public string WorkOrderId { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "BatchId")]
+        public string BatchId { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Route")]
+        public int Route { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlArray("SubBoards")]
+        [System.Xml.Serialization.XmlArrayItem("SubBoard")]
+        public SubBoard[] SubBoards { get; set; }
+
     }
 }

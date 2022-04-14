@@ -1,13 +1,15 @@
-﻿using System.Xml.Serialization;
-
+﻿
 namespace IPC.HERMES9852.Models
 {
-    [XmlRoot(ElementName = "StopTransport")]
+    [System.Xml.Serialization.XmlRoot(ElementName = "StopTransport")]
     public class StopTransport
     {
-        [XmlAttribute(AttributeName = "TransferState")]
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TransferState")]
         public int TransferState { get; set; }
-        [XmlAttribute(AttributeName = "BoardId")]
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "BoardId")]
         public string BoardId { get; set; }
     }
 }

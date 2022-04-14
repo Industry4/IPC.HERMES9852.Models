@@ -1,23 +1,24 @@
-﻿
-
-using System.Xml.Serialization;
-
-namespace IPC.HERMES9852.Models
+﻿namespace IPC.HERMES9852.Models
 {
+    [System.Xml.Serialization.XmlRoot(ElementName = "CurrentConfiguration")]
     public class CurrentConfiguration
     {
-        [XmlAttribute(AttributeName = "MachineId")]
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "MachineId")]
         public string MachineId { get; set; }
 
-        [XmlAttribute(AttributeName = "SupervisorySystemPort")]
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "SupervisorySystemPort")]
         public int SupervisorySystemPort { get; set; }
 
-        [XmlArray("UpstreamConfigurations")]
-        [XmlArrayItem("UpstreamConfiguration")]
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlArray("UpstreamConfigurations")]
+        [System.Xml.Serialization.XmlArrayItem("UpstreamConfiguration")]
         public UpstreamConfiguration[] UpstreamConfigurations { get; set; }
 
-        [XmlArray("DownstreamConfigurations")]
-        [XmlArrayItem("DownstreamConfiguration")]
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlArray("DownstreamConfigurations")]
+        [System.Xml.Serialization.XmlArrayItem("DownstreamConfiguration")]
         public DownstreamConfiguration[] DownstreamConfigurations { get; set; }
     }
 }

@@ -1,0 +1,1 @@
+"..\..\nuget.exe" pack Nuget/IPC.HERMES9852.Models.nuspec

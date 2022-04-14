@@ -1,41 +1,78 @@
-﻿using System.Xml.Serialization;
-
-namespace IPC.HERMES9852.Models
+﻿namespace IPC.HERMES9852.Models
 {
-    [XmlRoot(ElementName = "BoardForecast")]
+    [System.Xml.Serialization.XmlRoot(ElementName = "BoardForecast")]
     public class BoardForecast
     {
-        [XmlAttribute(AttributeName = "ForecastId")]
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ForecastId")]
         public string ForecastId { get; set; }
-        [XmlAttribute(AttributeName = "TimeUntilAvailable")]
-        public string TimeUntilAvailable { get; set; }
-        [XmlAttribute(AttributeName = "BoardId")]
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TimeUntilAvailable")]
+        public float TimeUntilAvailable { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "BoardId")]
         public string BoardId { get; set; }
-        [XmlAttribute(AttributeName = "BoardIdCreatedBy")]
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "BoardIdCreatedBy")]
         public string BoardIdCreatedBy { get; set; }
-        [XmlAttribute(AttributeName = "FailedBoard")]
-        public string FailedBoard { get; set; }
-        [XmlAttribute(AttributeName = "ProductTypeId")]
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "FailedBoard")]
+        public int FailedBoard { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProductTypeId")]
         public string ProductTypeId { get; set; }
-        [XmlAttribute(AttributeName = "FlippedBoard")]
-        public string FlippedBoard { get; set; }
-        [XmlAttribute(AttributeName = "TopBarcode")]
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "FlippedBoard")]
+        public int FlippedBoard { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TopBarcode")]
         public string TopBarcode { get; set; }
-        [XmlAttribute(AttributeName = "BottomBarcode")]
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "BottomBarcode")]
         public string BottomBarcode { get; set; }
-        [XmlAttribute(AttributeName = "Length")]
-        public string Length { get; set; }
-        [XmlAttribute(AttributeName = "Width")]
-        public string Width { get; set; }
-        [XmlAttribute(AttributeName = "Thickness")]
-        public string Thickness { get; set; }
-        [XmlAttribute(AttributeName = "ConveyorSpeed")]
-        public string ConveyorSpeed { get; set; }
-        [XmlAttribute(AttributeName = "TopClearanceHeight")]
-        public string TopClearanceHeight { get; set; }
-        [XmlAttribute(AttributeName = "BottomClearanceHeight")]
-        public string BottomClearanceHeight { get; set; }
-        [XmlAttribute(AttributeName = "Weight")]
-        public string Weight { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Length")]
+        public float Length { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Width")]
+        public float Width { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Thickness")]
+        public float Thickness { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ConveyorSpeed")]
+        public float ConveyorSpeed { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TopClearanceHeight")]
+        public float TopClearanceHeight { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "BottomClearanceHeight")]
+        public float BottomClearanceHeight { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Weight")]
+        public float Weight { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "WorkOrderId")]
+        public string WorkOrderId { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "BatchId")]
+        public string BatchId { get; set; }
     }
 }
