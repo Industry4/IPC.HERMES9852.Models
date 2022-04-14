@@ -1,5 +1,6 @@
 ﻿namespace IPC.HERMES9852.Models
 {
+    [System.Xml.Serialization.XmlRoot(ElementName = "Hermes")]
     public class QueryBoardInfoMessage
     {
         [System.Runtime.Serialization.DataMember]
