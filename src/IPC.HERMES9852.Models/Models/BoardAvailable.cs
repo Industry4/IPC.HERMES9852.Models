@@ -24,7 +24,13 @@
                     Thickness = 0,
                     ConveyorSpeed = 0,
                     TopClearanceHeight = 0,
-                    BottomClearanceHeight = 0
+                    BottomClearanceHeight = 0,
+                    Weight = 0,
+                    WorkOrderId = string.Empty,
+                    BatchId = string.Empty,
+                    Route = 0,
+                    Action = 0,
+                    SubBoards = new SubBoard[0]
                 };
             }
         }
@@ -102,6 +108,10 @@
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "Route")]
         public int Route { get; set; }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Action")]
+        public int Action { get; set; }
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlArray("SubBoards")]
