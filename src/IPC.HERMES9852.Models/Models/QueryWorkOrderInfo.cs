@@ -28,9 +28,19 @@ namespace IPC.HERMES9852.Models
         /// <summary>
         /// Indicates the slot in the magazine, enumerated from bottom to top, beginning with 1.
         /// </summary>
+        [System.Xml.Serialization.XmlIgnore]
+        public int? SlotId { get; set; }
+
+        [System.Xml.Serialization.XmlIgnore]
+        public bool XMLSlotIdSpecified { get { return SlotId.HasValue; } }
+
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "SlotId")]
-        public int? SlotId { get; set; }
+        public int XMLSlotId
+        {
+            get { return (SlotId.HasValue) ? SlotId.Value : 0; }
+            set { SlotId = value; }
+        }
 
         /// <summary>
         /// The barcode of the PCB.
