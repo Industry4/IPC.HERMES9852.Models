@@ -300,7 +300,7 @@ namespace IPC.HERMES9852.Models
         /// </summary>
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlArray("SubBoards")]
-        [System.Xml.Serialization.XmlArrayItem("SubBoard")]
+        [System.Xml.Serialization.XmlArrayItem("SB")]
         public SubBoard[] SubBoards { get; set; }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace IPC.HERMES9852.Models
 {
-    [System.Xml.Serialization.XmlRoot(ElementName = "SubBoard")]
+    [System.Xml.Serialization.XmlRoot(ElementName = "SB")]
     public class SubBoard
     {
         [System.Runtime.Serialization.DataMember]
