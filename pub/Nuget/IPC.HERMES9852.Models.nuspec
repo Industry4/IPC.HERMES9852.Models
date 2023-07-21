@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>IPC.HERMES9852.Models</id>
-    <version>1.5.1</version>
+    <version>1.5.2</version>
     <title>IPC-HERMES-9852 XML Messaging Models</title>
     <authors>4IR.UK</authors>
     <owners>4IR.UK</owners>
@@ -11,7 +11,8 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>XML Messaging Models for IPC-HERMES-9852 'The Hermes Standard'</description>
     <license type="expression">MIT</license>
-    <releaseNotes>1.5.1 Bug https://github.com/Industry4/IPC.HERMES9852.Models/issues/6
+    <releaseNotes>1.5.2 https://github.com/Industry4/IPC.HERMES9852.Models/issues/7
+1.5.1 Bug https://github.com/Industry4/IPC.HERMES9852.Models/issues/6
 1.5.0 Bug https://github.com/Industry4/IPC.HERMES9852.Models/issues/4
 Enhancement https://github.com/Industry4/IPC.HERMES9852.Models/issues/3
 Enhancement https://github.com/Industry4/IPC.HERMES9852.Models/issues/2
