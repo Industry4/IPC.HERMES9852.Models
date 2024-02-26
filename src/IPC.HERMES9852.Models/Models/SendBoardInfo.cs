@@ -180,5 +180,28 @@
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "BatchId")]
         public string BatchId { get; set; }
+
+        /// <summary>
+        /// A routing instruction to downstream machines.
+        /// 0 Route undefined
+        /// 1..99 Transfer the board at route[no.] /defined by line configuration
+        /// 900 Return the board
+        /// (≤ 998 Reserved for future definition)
+        /// 999 Manual removal of the board
+        /// ≥1000 For individual definition within a production line
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnore]
+        public int? Route { get; set; }
+
+        [System.Xml.Serialization.XmlIgnore]
+        public bool XMLRouteSpecified { get { return Route.HasValue; } }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Route")]
+        public int XMLRoute
+        {
+            get { return (Route.HasValue) ? Route.Value : 0; }
+            set { Route = value; }
+        }
     }
 }
