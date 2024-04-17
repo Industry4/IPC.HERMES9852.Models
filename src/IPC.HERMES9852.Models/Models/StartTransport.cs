@@ -22,10 +22,10 @@ namespace IPC.HERMES9852.Models
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "ConveyorSpeed")]
-        public float XMLConveyorSpeed
+        public string XMLConveyorSpeed
         {
-            get { return (ConveyorSpeed.HasValue) ? ConveyorSpeed.Value : 0; }
-            set { ConveyorSpeed = value; }
+            get { return (ConveyorSpeed.HasValue) ? ConveyorSpeed.ToString() : null; }
+            set { ConveyorSpeed = !string.IsNullOrEmpty(value) ? float.Parse(value) : default(float?); }
         }
     }
 }

@@ -49,10 +49,10 @@ namespace IPC.HERMES9852.Models
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "FlippedBoard")]
-        public int XMLFlippedBoard
+        public string XMLFlippedBoard
         {
-            get { return (FlippedBoard.HasValue) ? FlippedBoard.Value : 0; }
-            set { FlippedBoard = value; }
+            get { return (FlippedBoard.HasValue) ? FlippedBoard.ToString() : null; }
+            set { FlippedBoard = !string.IsNullOrEmpty(value) ? int.Parse(value) : default(int?); }
         }
 
         /// <summary>
@@ -66,10 +66,10 @@ namespace IPC.HERMES9852.Models
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "Length")]
-        public float XMLLength
+        public string XMLLength
         {
-            get { return (Length.HasValue) ? Length.Value : 0; }
-            set { Length = value; }
+            get { return (Length.HasValue) ? Length.ToString() : null; }
+            set { Length = !string.IsNullOrEmpty(value) ? float.Parse(value) : default(float?); }
         }
 
         /// <summary>
@@ -83,10 +83,10 @@ namespace IPC.HERMES9852.Models
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "Width")]
-        public float XMLWidth
+        public string XMLWidth
         {
-            get { return (Width.HasValue) ? Width.Value : 0; }
-            set { Width = value; }
+            get { return (Width.HasValue) ? Width.ToString() : null; }
+            set { Width = !string.IsNullOrEmpty(value) ? float.Parse(value) : default(float?); }
         }
 
         /// <summary>
@@ -100,10 +100,10 @@ namespace IPC.HERMES9852.Models
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "Thickness")]
-        public float XMLThickness
+        public string XMLThickness
         {
-            get { return (Thickness.HasValue) ? Thickness.Value : 0; }
-            set { Thickness = value; }
+            get { return (Thickness.HasValue) ? Thickness.ToString() : null; }
+            set { Thickness = !string.IsNullOrEmpty(value) ? float.Parse(value) : default(float?); }
         }
 
         /// <summary>
@@ -117,10 +117,10 @@ namespace IPC.HERMES9852.Models
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "ConveyorSpeed")]
-        public float XMLConveyorSpeed
+        public string XMLConveyorSpeed
         {
-            get { return (ConveyorSpeed.HasValue) ? ConveyorSpeed.Value : 0; }
-            set { ConveyorSpeed = value; }
+            get { return (ConveyorSpeed.HasValue) ? ConveyorSpeed.ToString() : null; }
+            set { ConveyorSpeed = !string.IsNullOrEmpty(value) ? float.Parse(value) : default(float?); }
         }
 
         /// <summary>
@@ -134,10 +134,10 @@ namespace IPC.HERMES9852.Models
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "TopClearanceHeight")]
-        public float XMLTopClearanceHeight
+        public string XMLTopClearanceHeight
         {
-            get { return (TopClearanceHeight.HasValue) ? TopClearanceHeight.Value : 0; }
-            set { TopClearanceHeight = value; }
+            get { return (TopClearanceHeight.HasValue) ? TopClearanceHeight.ToString() : null; }
+            set { TopClearanceHeight = !string.IsNullOrEmpty(value) ? float.Parse(value) : default(float?); }
         }
 
         /// <summary>
@@ -151,10 +151,10 @@ namespace IPC.HERMES9852.Models
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "BottomClearanceHeight")]
-        public float XMLBottomClearanceHeight
+        public string XMLBottomClearanceHeight
         {
-            get { return (BottomClearanceHeight.HasValue) ? BottomClearanceHeight.Value : 0; }
-            set { BottomClearanceHeight = value; }
+            get { return (BottomClearanceHeight.HasValue) ? BottomClearanceHeight.ToString() : null; }
+            set { BottomClearanceHeight = !string.IsNullOrEmpty(value) ? float.Parse(value) : default(float?); }
         }
 
         /// <summary>
@@ -168,10 +168,10 @@ namespace IPC.HERMES9852.Models
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "Weight")]
-        public float XMLWeight
+        public string XMLWeight
         {
-            get { return (Weight.HasValue) ? Weight.Value : 0; }
-            set { Weight = value; }
+            get { return (Weight.HasValue) ? Weight.ToString() : null; }
+            set { Weight = !string.IsNullOrEmpty(value) ? float.Parse(value) : default(float?); }
         }
 
         /// <summary>

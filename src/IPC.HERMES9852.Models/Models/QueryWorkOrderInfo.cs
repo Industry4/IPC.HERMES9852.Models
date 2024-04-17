@@ -36,10 +36,10 @@ namespace IPC.HERMES9852.Models
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "SlotId")]
-        public int XMLSlotId
+        public string XMLSlotId
         {
-            get { return (SlotId.HasValue) ? SlotId.Value : 0; }
-            set { SlotId = value; }
+            get { return (SlotId.HasValue) ? SlotId.ToString() : null; }
+            set { SlotId = !string.IsNullOrEmpty(value) ? int.Parse(value) : default(int?); }
         }
 
         /// <summary>

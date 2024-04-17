@@ -21,10 +21,10 @@
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "SupervisorySystemPort")]
-        public int XMLSupervisorySystemPort
+        public string XMLSupervisorySystemPort
         {
-            get { return (SupervisorySystemPort.HasValue) ? SupervisorySystemPort.Value : 0; }
-            set { SupervisorySystemPort = value; }
+            get { return (SupervisorySystemPort.HasValue) ? SupervisorySystemPort.ToString() : null; }
+            set { SupervisorySystemPort = !string.IsNullOrEmpty(value) ? int.Parse(value) : default(int?); }
         }
 
         /// <summary>

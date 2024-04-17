@@ -17,10 +17,10 @@
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "Type")]
-        public int XMLType
+        public string XMLType
         {
-            get { return (Type.HasValue) ? Type.Value : 0; }
-            set { Type = value; }
+            get { return (Type.HasValue) ? Type.ToString() : null; }
+            set { Type = !string.IsNullOrEmpty(value) ? int.Parse(value) : default(int?); }
         }
 
         /// <summary>

@@ -22,10 +22,10 @@
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "TimeUntilAvailable")]
-        public float XMLTimeUntilAvailable
+        public string XMLTimeUntilAvailable
         {
-            get { return (TimeUntilAvailable.HasValue) ? TimeUntilAvailable.Value : 0; }
-            set { TimeUntilAvailable = value; }
+            get { return (TimeUntilAvailable.HasValue) ? TimeUntilAvailable.ToString() : null; }
+            set { TimeUntilAvailable = !string.IsNullOrEmpty(value) ? float.Parse(value) : default(float?); }
         }
 
         /// <summary>
@@ -93,10 +93,10 @@
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "Length")]
-        public float XMLLength
+        public string XMLLength
         {
-            get { return (Length.HasValue) ? Length.Value : 0; }
-            set { Length = value; }
+            get { return (Length.HasValue) ? Length.ToString() : null; }
+            set { Length = !string.IsNullOrEmpty(value) ? float.Parse(value) : default(float?); }
         }
 
         /// <summary>
@@ -110,10 +110,10 @@
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "Width")]
-        public float XMLWidth
+        public string XMLWidth
         {
-            get { return (Width.HasValue) ? Width.Value : 0; }
-            set { Width = value; }
+            get { return (Width.HasValue) ? Width.ToString() : null; }
+            set { Width = !string.IsNullOrEmpty(value) ? float.Parse(value) : default(float?); }
         }
 
         /// <summary>
@@ -127,10 +127,10 @@
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "Thickness")]
-        public float XMLThickness
+        public string XMLThickness
         {
-            get { return (Thickness.HasValue) ? Thickness.Value : 0; }
-            set { Thickness = value; }
+            get { return (Thickness.HasValue) ? Thickness.ToString() : null; }
+            set { Thickness = !string.IsNullOrEmpty(value) ? float.Parse(value) : default(float?); }
         }
 
         /// <summary>
@@ -144,10 +144,10 @@
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "ConveyorSpeed")]
-        public float XMLConveyorSpeed
+        public string XMLConveyorSpeed
         {
-            get { return (ConveyorSpeed.HasValue) ? ConveyorSpeed.Value : 0; }
-            set { ConveyorSpeed = value; }
+            get { return (ConveyorSpeed.HasValue) ? ConveyorSpeed.ToString() : null; }
+            set { ConveyorSpeed = !string.IsNullOrEmpty(value) ? float.Parse(value) : default(float?); }
         }
 
         /// <summary>
@@ -161,10 +161,10 @@
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "TopClearanceHeight")]
-        public float XMLTopClearanceHeight
+        public string XMLTopClearanceHeight
         {
-            get { return (TopClearanceHeight.HasValue) ? TopClearanceHeight.Value : 0; }
-            set { TopClearanceHeight = value; }
+            get { return (TopClearanceHeight.HasValue) ? TopClearanceHeight.ToString() : null; }
+            set { TopClearanceHeight = !string.IsNullOrEmpty(value) ? float.Parse(value) : default(float?); }
         }
 
         /// <summary>
@@ -178,10 +178,10 @@
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "BottomClearanceHeight")]
-        public float XMLBottomClearanceHeight
+        public string XMLBottomClearanceHeight
         {
-            get { return (BottomClearanceHeight.HasValue) ? BottomClearanceHeight.Value : 0; }
-            set { BottomClearanceHeight = value; }
+            get { return (BottomClearanceHeight.HasValue) ? BottomClearanceHeight.ToString() : null; }
+            set { BottomClearanceHeight = !string.IsNullOrEmpty(value) ? float.Parse(value) : default(float?); }
         }
 
         /// <summary>
@@ -195,10 +195,10 @@
 
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlAttribute(AttributeName = "Weight")]
-        public float XMLWeight
+        public string XMLWeight
         {
-            get { return (Weight.HasValue) ? Weight.Value : 0; }
-            set { Weight = value; }
+            get { return (Weight.HasValue) ? Weight.ToString() : null; }
+            set { Weight = !string.IsNullOrEmpty(value) ? float.Parse(value) : default(float?); }
         }
 
         /// <summary>
