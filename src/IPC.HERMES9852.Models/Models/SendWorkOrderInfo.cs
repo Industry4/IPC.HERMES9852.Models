@@ -247,6 +247,28 @@ namespace IPC.HERMES9852.Models
         }
 
         /// <summary>
+        /// An action instruction to downstream machine.
+        /// 0 Action undefined
+        /// 1 Process the board(e.g., Flipping, Marking, …)
+        /// 2 Pass through the board without processing
+        /// (≤ 999 Reserved for future definition)
+        /// ≥1000 For individual definition within a production line
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnore]
+        public int? Action { get; set; }
+
+        [System.Xml.Serialization.XmlIgnore]
+        public bool XMLActionSpecified { get { return Action.HasValue; } }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Action")]
+        public string XMLAction
+        {
+            get { return (Action.HasValue) ? Action.ToString() : null; }
+            set { Action = !string.IsNullOrEmpty(value) ? int.Parse(value) : default(int?); }
+        }
+
+        /// <summary>
         /// A list of SubBoards 
         /// Note: Due to limited retain memory in PLCs this attribute might only be
         /// supported for a limited number of subboards.
