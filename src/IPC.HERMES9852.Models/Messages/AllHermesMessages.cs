@@ -98,6 +98,23 @@
         [System.Runtime.Serialization.DataMember]
         [System.Xml.Serialization.XmlElement(ElementName = "Command")]
         public ACommand Command { get; set; }
+
+        /// <summary>
+        /// Introduced in 1.6. The QueryHermesCapabilities message is sent via Hermes vertical channel
+        /// from a supervisory system to a machine to query this machine about its Hermes capabilities.
+        /// </summary>
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlElement(ElementName = "QueryHermesCapabilities")]
+        public QueryHermesCapabilities QueryHermesCapabilities { get; set; }
+
+        /// <summary>
+        /// Introduced in 1.6. The SendHermesCapabilities message is sent via Hermes vertical channel
+        /// from a machine to a supervisory system to reply with this machine's Hermes capabilities
+        /// to a previous inquiry by a QueryHermesCapabilities message.
+        /// </summary>
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlElement(ElementName = "SendHermesCapabilities")]
+        public SendHermesCapabilities SendHermesCapabilities { get; set; }
     }
 }
 

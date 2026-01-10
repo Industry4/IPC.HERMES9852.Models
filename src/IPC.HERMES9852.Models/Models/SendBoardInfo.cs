@@ -168,6 +168,23 @@
         }
 
         /// <summary>
+        /// The weight of the PCB in grams
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnore]
+        public float? Weight { get; set; }
+
+        [System.Xml.Serialization.XmlIgnore]
+        public bool XMLWeightSpecified { get { return Weight.HasValue; } }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Weight")]
+        public string XMLWeight
+        {
+            get { return (Weight.HasValue) ? Weight.ToString() : null; }
+            set { Weight = !string.IsNullOrEmpty(value) ? float.Parse(value) : default(float?); }
+        }
+
+        /// <summary>
         /// Identifies the work order for production of the PCB.
         /// </summary>
         [System.Runtime.Serialization.DataMember]
@@ -203,5 +220,37 @@
             get { return (Route.HasValue) ? Route.ToString() : null; }
             set { Route = !string.IsNullOrEmpty(value) ? int.Parse(value) : default(int?); }
         }
+
+        /// <summary>
+        /// An action instruction to downstream machine.
+        /// 0 Action undefined
+        /// 1 Process the board(e.g., Flipping, Marking, …)
+        /// 2 Pass through the board without processing
+        /// (≤ 999 Reserved for future definition)
+        /// ≥1000 For individual definition within a production line
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnore]
+        public int? Action { get; set; }
+
+        [System.Xml.Serialization.XmlIgnore]
+        public bool XMLActionSpecified { get { return Action.HasValue; } }
+
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Action")]
+        public string XMLAction
+        {
+            get { return (Action.HasValue) ? Action.ToString() : null; }
+            set { Action = !string.IsNullOrEmpty(value) ? int.Parse(value) : default(int?); }
+        }
+
+        /// <summary>
+        /// A list of SubBoards. Note: Due to limited retain memory in PLCs
+        /// this attribute might only be supported for a limited number of
+        /// subboards.
+        /// </summary>
+        [System.Runtime.Serialization.DataMember]
+        [System.Xml.Serialization.XmlArray("SubBoards")]
+        [System.Xml.Serialization.XmlArrayItem("SB")]
+        public SubBoard[] SubBoards { get; set; }
     }
 }

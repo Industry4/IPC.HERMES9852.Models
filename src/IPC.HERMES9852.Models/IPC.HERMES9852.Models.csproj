@@ -1,118 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0B6A1F2D-18FE-430E-BD88-84F225B967AD}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IPC.HERMES9852.Models</RootNamespace>
-    <AssemblyName>IPC.HERMES9852.Models</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
+    <Title>IPC.HERMES9852.Models</Title>
+    <Description>XML Models of the Hermes Standard (IPC-HERMES-9852)</Description>
+    <Company>On behalf of ipc.org</Company>
+    <Product>IPC.HERMES9852.Models</Product>
+    <Copyright>IPC Hermes</Copyright>
+    <AssemblyVersion>1.6.0.0</AssemblyVersion>
+    <FileVersion>1.6.0.0</FileVersion>
+    <Version>1.6.0.0</Version>
+    <PackageId>IPC.HERMES9852.Models</PackageId>
+    <Authors>4IR.UK</Authors>
+    <PackageProjectUrl>https://github.com/Industry4/IPC.HERMES9852.Models</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Industry4/IPC.HERMES9852.Models</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>IPC IPC_HERMES_9852 Hermes 9852 The_Hermes_Standard Hermes SMT</PackageTags>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Messages\QueryWorkOrderInfoMessage.cs" />
-    <Compile Include="Messages\BoardArrivedMessage.cs" />
-    <Compile Include="Models\BoardArrived.cs" />
-    <Compile Include="Models\BoardAvailable.cs" />
-    <Compile Include="Models\BoardDeparted.cs" />
-    <Compile Include="Models\Command.cs" />
-    <Compile Include="Models\Children\Features\FeatureBoardForecast.cs" />
-    <Compile Include="Models\Children\Features\FeatureBoardTracking.cs" />
-    <Compile Include="Models\Children\Features\FeatureCheckAliveResponse.cs" />
-    <Compile Include="Models\Children\Features\FeatureCommand.cs" />
-    <Compile Include="Models\Children\Features\FeatureConfiguration.cs" />
-    <Compile Include="Models\Children\Features\FeatureQueryBoardInfo.cs" />
-    <Compile Include="Models\Children\Features\FeatureQueryWorkOrderInfo.cs" />
-    <Compile Include="Models\Children\Features\FeatureReplyWorkOrderInfo.cs" />
-    <Compile Include="Models\Children\Features\FeatureSendBoardInfo.cs" />
-    <Compile Include="Models\Children\Features\FeatureSendWorkOrderInfo.cs" />
-    <Compile Include="Models\QueryWorkOrderInfo.cs" />
-    <Compile Include="Models\ReplyWorkOrderInfo.cs" />
-    <Compile Include="Models\SendBoardInfo.cs" />
-    <Compile Include="Models\SendWorkOrderInfo.cs" />
-    <Compile Include="Models\Children\SubBoard.cs" />
-    <Compile Include="Models\SupervisoryServiceDescription.cs" />
-    <Compile Include="Models\Children\Features\SupvervisoryFeatures.cs" />
-    <Compile Include="Models\BoardForecast.cs" />
-    <Compile Include="Models\CheckAlive.cs" />
-    <Compile Include="Models\CurrentConfiguration.cs" />
-    <Compile Include="Models\Children\DownstreamConfiguration.cs" />
-    <Compile Include="Models\GetConfiguration.cs" />
-    <Compile Include="Messages\AllHermesMessages.cs" />
-    <Compile Include="Models\MachineReady.cs" />
-    <Compile Include="Models\Notification.cs" />
-    <Compile Include="Models\QueryBoardInfo.cs" />
-    <Compile Include="Models\RevokeBoardAvailable.cs" />
-    <Compile Include="Models\RevokeMachineReady.cs" />
-    <Compile Include="Models\ServiceDescription.cs" />
-    <Compile Include="Models\SetConfiguration.cs" />
-    <Compile Include="Models\StartTransport.cs" />
-    <Compile Include="Models\StopTransport.cs" />
-    <Compile Include="Models\Children\Features\SupportedFeatures.cs" />
-    <Compile Include="Models\TransportFinished.cs" />
-    <Compile Include="Models\Children\UpstreamConfiguration.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Messages\BoardAvailableMessage.cs" />
-    <Compile Include="Messages\BoardForecastMessage.cs" />
-    <Compile Include="Messages\CheckAliveMessage.cs" />
-    <Compile Include="Messages\BoardDepartedMessage.cs" />
-    <Compile Include="Messages\CommandMessage.cs" />
-    <Compile Include="Messages\CurrentConfigurationMessage.cs" />
-    <Compile Include="Messages\GetConfigurationMessage.cs" />
-    <Compile Include="Messages\ReplyWorkOrderInfoMessage.cs" />
-    <Compile Include="Messages\SendWorkOrderInfoMessage.cs" />
-    <Compile Include="Messages\SetConfigurationMessage.cs" />
-    <Compile Include="Messages\SupervisoryServiceDescriptionMessage.cs" />
-    <Compile Include="Messages\MachineReadyMessage.cs" />
-    <Compile Include="Messages\NotificationMessage.cs" />
-    <Compile Include="Messages\QueryBoardInfoMessage.cs" />
-    <Compile Include="Messages\RevokeBoardAvailableMessage.cs" />
-    <Compile Include="Messages\RevokeMachineReadyMessage.cs" />
-    <Compile Include="Messages\SendBoardInfoMessage.cs" />
-    <Compile Include="Messages\ServiceDescriptionMessage.cs" />
-    <Compile Include="Messages\StartTransportMessage.cs" />
-    <Compile Include="Messages\StopTransportMessage.cs" />
-    <Compile Include="Messages\TransportFinishedMessage.cs" />
-  </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>

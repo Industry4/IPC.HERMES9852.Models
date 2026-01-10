@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>IPC.HERMES9852.Models</id>
-    <version>1.5.4</version>
+    <version>1.6.0</version>
     <title>IPC-HERMES-9852 XML Messaging Models</title>
     <authors>4IR.UK</authors>
     <owners>4IR.UK</owners>
@@ -12,7 +12,8 @@
     <description>XML Messaging Models for IPC-HERMES-9852 'The Hermes Standard'</description>
     <license type="expression">MIT</license>
     <repository type="git" url="https://github.com/Industry4/IPC.HERMES9852.Models" />
-    <releaseNotes>1.5.4 Enhancement https://github.com/Industry4/IPC.HERMES9852.Models/issues/9
+    <releaseNotes>1.6.0 Enhancement  Models Updated to The Hermes Standard 1.6 https://github.com/Industry4/IPC.HERMES9852.Models/issues/10
+1.5.4 Enhancement https://github.com/Industry4/IPC.HERMES9852.Models/issues/9
 1.5.3 Enhancement https://github.com/Industry4/IPC.HERMES9852.Models/issues/8
 1.5.2 https://github.com/Industry4/IPC.HERMES9852.Models/issues/7
 1.5.1 Bug https://github.com/Industry4/IPC.HERMES9852.Models/issues/6
@@ -22,14 +23,15 @@ Enhancement https://github.com/Industry4/IPC.HERMES9852.Models/issues/2
 1.4.3 Bug: https://github.com/Industry4/IPC.HERMES9852.Models/issues/1
 1.4.2 Models Updated to The Hermes Standard 1.4 https://www.the-hermes-standard.info/wp-content/uploads/The_Hermes_Standard_Version_1.4.pdf</releaseNotes>
     <copyright>IPC</copyright>
-    <tags>IPC IPC_HERMES_9852 Hermes 9852 The_Hermes_Standard Hermes SMT Industry40 Smart_Factory</tags>
+    <tags>IPC IPC_HERMES_9852 Hermes 9852 The_Hermes_Standard Hermes SMT</tags>
     <dependencies>
-      <group targetFramework=".NETFramework4.7.2">
-      </group>
+      <group targetFramework=".NETFramework4.6.2" />
+      <group targetFramework=".NETStandard2.0" />
     </dependencies>
   </metadata>
   <files>
     <file src="images\hermes-standard-ico.png" target="images\" />
-    <file src="..\..\src\IPC.HERMES9852.Models\bin\Release\IPC.HERMES9852.Models.dll" target="lib\net472" />
+    <file src="..\..\src\IPC.HERMES9852.Models\bin\Release\net462\IPC.HERMES9852.Models.dll" target="lib\net462" />
+    <file src="..\..\src\IPC.HERMES9852.Models\bin\Release\netstandard2.0\IPC.HERMES9852.Models.dll" target="lib\netstandard2.0" />
   </files>
 </package>

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36705.20 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPC.HERMES9852.Models", "IPC.HERMES9852.Models\IPC.HERMES9852.Models.csproj", "{0B6A1F2D-18FE-430E-BD88-84F225B967AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPC.HERMES9852.Models", "IPC.HERMES9852.Models\IPC.HERMES9852.Models.csproj", "{C2FEE0D2-7F9E-4A2A-AB72-B407F4B2D6CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0B6A1F2D-18FE-430E-BD88-84F225B967AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0B6A1F2D-18FE-430E-BD88-84F225B967AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0B6A1F2D-18FE-430E-BD88-84F225B967AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0B6A1F2D-18FE-430E-BD88-84F225B967AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2FEE0D2-7F9E-4A2A-AB72-B407F4B2D6CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2FEE0D2-7F9E-4A2A-AB72-B407F4B2D6CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2FEE0D2-7F9E-4A2A-AB72-B407F4B2D6CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2FEE0D2-7F9E-4A2A-AB72-B407F4B2D6CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62857F7C-89F7-4B22-9B01-3F1A901C7300}
 	EndGlobalSection
 EndGlobal
